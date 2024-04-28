@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% block title %}Добавление dep{% endblock %}
+
+{% block style %}
+
+{% endblock %}
+
+{% block body %}
+<h2>Добавление департамента</h2>
+    <form method="post">
+        <input type="text" name="title" placeholder="title" required>
+        <input type="text" name="chief" placeholder="chief" required>
+        <input type="text" name="members" placeholder="members" required>
+        <input type="text" name="email" placeholder="email" required>
+        <input type="submit" value="Добавить">
+    </form>
+{% endblock %}

@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% block title %}Добавление joba{% endblock %}
+
+{% block style %}
+
+{% endblock %}
+
+{% block body %}
+<h2>Добавление работы</h2>
+    <form method="post">
+        <input type="text" name="team_laeder" placeholder="team_leader" required>
+        <input type="text" name="job" placeholder="job" required>
+        <input type="text" name="work_size" placeholder="work_size" required>
+        <input type="text" name="collaborators" placeholder="collaborators" required>
+        <input type="submit" value="Добавить">
+    </form>
+{% endblock %}

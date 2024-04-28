@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+{% block title %}Список работ{% endblock %}
+
+{% block style %}
+
+{% endblock %}
+
+{% block body %}
+<h2>Список работ</h2>
+    <table>
+        <tr>
+            <th>Job ID</th>
+            <th>Job Name</th>
+            <th>Team Leader</th>
+            <th>Hours</th>
+            <th>Collaborators</th>
+            <th>Finished?</th>
+        </tr>
+        {% for job in jobs %}
+        <tr>
+            <td>{{ job.id }}</td>
+            <td>{{ job.job }}</td>
+            <td>{{ job.user.surname }} {{ job.user.name }}</td>
+            <td>{{ job.work_size }}</td>
+            <td>{{ job.collaborators }}</td>
+            <td>{{ job.is_finished }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+{% endblock %}
